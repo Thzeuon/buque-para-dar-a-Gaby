@@ -1,0 +1,333 @@
+```html
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para a minha princesinha ♡</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(ellipse at center, #24101d 0%, #100811 65%, #080509 100%);
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: Georgia, serif;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    color: #b52e65;
+    font-size: clamp(25px, 5vw, 43px);
+    margin: 35px 10px 0;
+    text-shadow: 0 0 15px #a51b58, 0 0 35px #65102f;
+    font-weight: normal;
+    position: relative;
+    z-index: 2;
+}
+
+.subtitle {
+    text-align: center;
+    color: #e8a1bd;
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-top: 12px;
+    position: relative;
+    z-index: 2;
+}
+
+.bouquet-container {
+    width: min(100%, 850px);
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: visible;
+}
+
+/* FLORES */
+.petal {
+    stroke: #8d153e;
+    stroke-width: 1.5;
+}
+
+.flower {
+    filter: drop-shadow(0 0 5px #a92b58);
+}
+
+.center {
+    fill: url(#gold);
+    stroke: #8e4b25;
+    stroke-width: 2;
+}
+
+.leaf {
+    fill: url(#leafGradient);
+    stroke: #164b32;
+    stroke-width: 2;
+}
+
+.stem {
+    fill: none;
+    stroke: #39794b;
+    stroke-width: 7;
+    stroke-linecap: round;
+}
+
+.wrapper {
+    fill: url(#paper);
+    stroke: #d98ba9;
+    stroke-width: 3;
+}
+
+.bow {
+    fill: #bd315f;
+    stroke: #f08aaa;
+    stroke-width: 2;
+}
+
+/* COISAS A FLUTUAR NO FUNDO */
+.floating {
+    position: fixed;
+    bottom: -50px;
+    pointer-events: none;
+    z-index: 1;
+    animation: floatUp linear infinite;
+    opacity: 0;
+    text-shadow: 0 0 12px currentColor;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% { opacity: .85; }
+    85% { opacity: .7; }
+    100% {
+        transform: translateY(-115vh) rotate(35deg);
+        opacity: 0;
+    }
+}
+
+@media(max-width: 600px) {
+    h1 { margin-top: 25px; }
+    .subtitle { letter-spacing: 2px; }
+}
+</style>
+</head>
+
+<body>
+
+<h1>para voce minha princesinha ♡</h1>
+<div class="subtitle">um buquê feito especialmente para ti</div>
+
+<div class="bouquet-container">
+<svg viewBox="0 0 900 850" xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+    <radialGradient id="redPetal">
+        <stop offset="0%" stop-color="#ff829a"/>
+        <stop offset="65%" stop-color="#e72d59"/>
+        <stop offset="100%" stop-color="#a80e3b"/>
+    </radialGradient>
+
+    <radialGradient id="pinkPetal">
+        <stop offset="0%" stop-color="#ffe0ed"/>
+        <stop offset="65%" stop-color="#f58bb8"/>
+        <stop offset="100%" stop-color="#c83d79"/>
+    </radialGradient>
+
+    <radialGradient id="lightPetal">
+        <stop offset="0%" stop-color="#fff0f5"/>
+        <stop offset="70%" stop-color="#ffb7d0"/>
+        <stop offset="100%" stop-color="#df6296"/>
+    </radialGradient>
+
+    <radialGradient id="gold">
+        <stop offset="0%" stop-color="#fff3a3"/>
+        <stop offset="55%" stop-color="#e8ae42"/>
+        <stop offset="100%" stop-color="#a96322"/>
+    </radialGradient>
+
+    <linearGradient id="leafGradient" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#8acb79"/>
+        <stop offset="50%" stop-color="#388b50"/>
+        <stop offset="100%" stop-color="#174a30"/>
+    </linearGradient>
+
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#f5c5d7"/>
+        <stop offset="50%" stop-color="#c8799b"/>
+        <stop offset="100%" stop-color="#8f345f"/>
+    </linearGradient>
+
+    <!-- Modelo de flor -->
+    <g id="rose">
+        <g class="petal" fill="url(#redPetal)">
+            <ellipse cx="0" cy="-29" rx="14" ry="27"/>
+            <ellipse cx="0" cy="-29" rx="14" ry="27" transform="rotate(45)"/>
+            <ellipse cx="0" cy="-29" rx="14" ry="27" transform="rotate(90)"/>
+            <ellipse cx="0" cy="-29" rx="14" ry="27" transform="rotate(135)"/>
+            <ellipse cx="0" cy="-29" rx="14" ry="27" transform="rotate(180)"/>
+            <ellipse cx="0" cy="-29" rx="14" ry="27" transform="rotate(225)"/>
+            <ellipse cx="0" cy="-29" rx="14" ry="27" transform="rotate(270)"/>
+            <ellipse cx="0" cy="-29" rx="14" ry="27" transform="rotate(315)"/>
+        </g>
+        <circle class="center" r="13"/>
+        <circle cx="-4" cy="-4" r="3" fill="#fff1a8"/>
+        <circle cx="5" cy="3" r="2.5" fill="#fff1a8"/>
+    </g>
+
+    <g id="pinkRose">
+        <g class="petal" fill="url(#pinkPetal)">
+            <ellipse cx="0" cy="-27" rx="15" ry="26"/>
+            <ellipse cx="0" cy="-27" rx="15" ry="26" transform="rotate(45)"/>
+            <ellipse cx="0" cy="-27" rx="15" ry="26" transform="rotate(90)"/>
+            <ellipse cx="0" cy="-27" rx="15" ry="26" transform="rotate(135)"/>
+            <ellipse cx="0" cy="-27" rx="15" ry="26" transform="rotate(180)"/>
+            <ellipse cx="0" cy="-27" rx="15" ry="26" transform="rotate(225)"/>
+            <ellipse cx="0" cy="-27" rx="15" ry="26" transform="rotate(270)"/>
+            <ellipse cx="0" cy="-27" rx="15" ry="26" transform="rotate(315)"/>
+        </g>
+        <circle class="center" r="12"/>
+        <circle cx="-4" cy="-3" r="3" fill="#fff1a8"/>
+        <circle cx="4" cy="4" r="2.5" fill="#fff1a8"/>
+    </g>
+
+    <g id="lightRose">
+        <g class="petal" fill="url(#lightPetal)">
+            <ellipse cx="0" cy="-25" rx="13" ry="23"/>
+            <ellipse cx="0" cy="-25" rx="13" ry="23" transform="rotate(45)"/>
+            <ellipse cx="0" cy="-25" rx="13" ry="23" transform="rotate(90)"/>
+            <ellipse cx="0" cy="-25" rx="13" ry="23" transform="rotate(135)"/>
+            <ellipse cx="0" cy="-25" rx="13" ry="23" transform="rotate(180)"/>
+            <ellipse cx="0" cy="-25" rx="13" ry="23" transform="rotate(225)"/>
+            <ellipse cx="0" cy="-25" rx="13" ry="23" transform="rotate(270)"/>
+            <ellipse cx="0" cy="-25" rx="13" ry="23" transform="rotate(315)"/>
+        </g>
+        <circle class="center" r="11"/>
+    </g>
+</defs>
+
+<!-- CAULES: ficam presos às flores -->
+<g>
+    <path class="stem" d="M450 260 Q445 410 450 620"/>
+    <path class="stem" d="M330 300 Q350 430 430 620"/>
+    <path class="stem" d="M570 290 Q540 440 465 620"/>
+    <path class="stem" d="M220 350 Q290 470 425 620"/>
+    <path class="stem" d="M680 350 Q600 480 475 620"/>
+    <path class="stem" d="M390 210 Q405 420 440 620"/>
+    <path class="stem" d="M510 205 Q490 420 460 620"/>
+    <path class="stem" d="M150 420 Q270 520 420 620"/>
+    <path class="stem" d="M750 420 Q620 520 480 620"/>
+    <path class="stem" d="M275 235 Q330 440 435 620"/>
+    <path class="stem" d="M625 230 Q565 440 470 620"/>
+    <path class="stem" d="M450 150 Q450 400 450 620"/>
+</g>
+
+<!-- FOLHAS -->
+<g>
+    <path class="leaf" d="M350 420 Q285 365 270 405 Q310 455 350 420Z"/>
+    <path class="leaf" d="M365 470 Q420 405 455 440 Q425 490 365 470Z"/>
+    <path class="leaf" d="M540 420 Q600 360 630 395 Q605 450 540 420Z"/>
+    <path class="leaf" d="M520 500 Q460 445 445 485 Q480 525 520 500Z"/>
+    <path class="leaf" d="M290 500 Q230 445 210 485 Q250 525 290 500Z"/>
+    <path class="leaf" d="M600 500 Q660 445 690 480 Q655 525 600 500Z"/>
+    <path class="leaf" d="M400 540 Q350 490 325 520 Q360 560 400 540Z"/>
+    <path class="leaf" d="M500 555 Q550 500 580 530 Q550 570 500 555Z"/>
+</g>
+
+<!-- FLORES GRANDES, EM CAMADAS -->
+<g class="flower">
+    <use href="#rose" transform="translate(450 150) scale(1.65)"/>
+    <use href="#pinkRose" transform="translate(330 220) scale(1.45)"/>
+    <use href="#rose" transform="translate(570 220) scale(1.5)"/>
+    <use href="#lightRose" transform="translate(220 320) scale(1.4)"/>
+    <use href="#pinkRose" transform="translate(680 320) scale(1.4)"/>
+    <use href="#rose" transform="translate(390 340) scale(1.35)"/>
+    <use href="#pinkRose" transform="translate(510 350) scale(1.35)"/>
+    <use href="#lightRose" transform="translate(150 420) scale(1.2)"/>
+    <use href="#rose" transform="translate(750 420) scale(1.2)"/>
+    <use href="#pinkRose" transform="translate(275 130) scale(1.15)"/>
+    <use href="#lightRose" transform="translate(625 135) scale(1.15)"/>
+    <use href="#rose" transform="translate(450 280) scale(1.15)"/>
+</g>
+
+<!-- PEQUENAS FLORES DE PREENCHIMENTO -->
+<g class="flower">
+    <use href="#lightRose" transform="translate(290 270) scale(.55)"/>
+    <use href="#lightRose" transform="translate(610 275) scale(.55)"/>
+    <use href="#pinkRose" transform="translate(350 390) scale(.5)"/>
+    <use href="#pinkRose" transform="translate(550 400) scale(.5)"/>
+    <use href="#lightRose" transform="translate(205 385) scale(.5)"/>
+    <use href="#lightRose" transform="translate(700 380) scale(.5)"/>
+</g>
+
+<!-- EMBRULHO DO BUQUÊ -->
+<path class="wrapper" d="M230 490 Q450 590 670 490 L550 750 Q450 805 350 750Z"/>
+
+<path d="M230 490 Q450 625 670 490" fill="none" stroke="#ffe0eb" stroke-width="5"/>
+
+<path d="M350 750 Q450 790 550 750" fill="none" stroke="#f5c1d5" stroke-width="5"/>
+
+<!-- FITA -->
+<path class="bow" d="M450 650 C390 590 330 635 390 675 C410 685 430 675 450 660Z"/>
+<path class="bow" d="M450 650 C510 590 570 635 510 675 C490 685 470 675 450 660Z"/>
+<circle cx="450" cy="655" r="17" fill="#f4a0bd" stroke="#8f204b" stroke-width="3"/>
+<path d="M445 670 L415 735 L450 715 L475 745 L460 670Z" fill="#bd315f" stroke="#f08aaa" stroke-width="2"/>
+
+<!-- BRILHOS -->
+<g fill="#ffe4ef">
+    <path d="M110 270 l5 15 15 5 -15 5 -5 15 -5 -15 -15 -5 15 -5Z"/>
+    <path d="M780 210 l5 15 15 5 -15 5 -5 15 -5 -15 -15 -5 15 -5Z"/>
+    <path d="M180 550 l4 11 11 4 -11 4 -4 11 -4 -11 -11 -4 11 -4Z"/>
+    <path d="M720 550 l4 11 11 4 -11 4 -4 11 -4 -11 -11 -4 11 -4Z"/>
+</g>
+
+</svg>
+</div>
+
+<script>
+const symbols = [
+    "♡", "♥", "<3", "ღ", "✧", "୨୧",
+    "I love you", "♡", "♥", "⋆", "✿"
+];
+
+const colors = [
+    "#ff8eb8", "#ff4f87", "#e8a1d0",
+    "#ffd4e5", "#d85b91", "#ffffff"
+];
+
+function createFloatingSymbol() {
+    const item = document.createElement("div");
+    item.className = "floating";
+    item.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+
+    item.style.left = Math.random() * 100 + "vw";
+    item.style.color = colors[Math.floor(Math.random() * colors.length)];
+    item.style.fontSize = (14 + Math.random() * 22) + "px";
+    item.style.animationDuration = (7 + Math.random() * 9) + "s";
+
+    document.body.appendChild(item);
+
+    setTimeout(() => item.remove(), 17000);
+}
+
+setInterval(createFloatingSymbol, 450);
+</script>
+
+</body>
+</html>
+```
